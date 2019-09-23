@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="前端,javascript,">
+  <meta name="keywords" content="javascript,">
 
 
 
@@ -88,13 +88,13 @@
 
 
 
-<meta name="keywords" content="前端,javascript">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="工具函数">
 <meta property="og:url" content="https://www.miaohanzhong.cn/工具函数.html">
 <meta property="og:site_name" content="好记性不如烂键盘">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-14T04:37:19.613Z">
+<meta property="og:updated_time" content="2019-09-14T11:51:10.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工具函数">
 
@@ -417,10 +417,10 @@
 <a id="more"></a>
 
 <ul>
-<li>字符串转数组对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串数据结构</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'&#123;"fileId":20945,"folderId":1,"uploadId":1401,"name":"2019-7-10 10-25-49.JPG","urlName":"6a957d583561508.JPG"&#125;,&#123;"fileId":20952,"folderId":1,"uploadId":1409,"name":"Koala.jpg","urlName":"4b6981873d21c8e.jpg"&#125;,&#123;"fileId":20951,"folderId":1,"uploadId":1408,"name":"Koala.jpg","urlName":"e7a9380346ce52a.jpg"&#125;'</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">setAttachmentValue</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (data) &#123;</span><br><span class="line">          <span class="keyword">var</span> _dataStr = data.substring(<span class="number">0</span>, data.length).replace(<span class="regexp">/&#125;,&#123;/g</span>, <span class="string">'&#125;,,&#123;'</span>).replace(<span class="regexp">/\[/g</span>, <span class="string">''</span>).replace(<span class="regexp">/\]/g</span>, <span class="string">''</span>);</span><br><span class="line">          <span class="keyword">if</span> (_dataStr.indexOf(<span class="string">',,'</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">              data = _dataStr.split(<span class="string">",,"</span>);</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              <span class="keyword">var</span> _array = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">              <span class="keyword">var</span> _objStr = _dataStr.replace(<span class="regexp">/\[/g</span>, <span class="string">''</span>).replace(<span class="regexp">/\]/g</span>, <span class="string">''</span>);</span><br><span class="line">              _array.push(_objStr)</span><br><span class="line">              data = _array</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">var</span> u = <span class="number">0</span>; u &lt; data.length; u++) &#123;</span><br><span class="line">              <span class="keyword">if</span> (data[u] &amp;&amp; data[u].length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                  <span class="keyword">var</span> attachmentObj = <span class="built_in">JSON</span>.parse(data[u].substring(<span class="number">0</span>, data[u].length));</span><br><span class="line">                  data[u] = attachmentObj</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">return</span> data</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> []</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>字符串转数组对象</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串数据结构</span></span><br><span class="line"><span class="keyword">var</span> str =</span><br><span class="line">  <span class="string">'&#123;"fileId":20945,"folderId":1,"uploadId":1401,"name":"2019-7-10 10-25-49.JPG","urlName":"6a957d583561508.JPG"&#125;,&#123;"fileId":20952,"folderId":1,"uploadId":1409,"name":"Koala.jpg","urlName":"4b6981873d21c8e.jpg"&#125;,&#123;"fileId":20951,"folderId":1,"uploadId":1408,"name":"Koala.jpg","urlName":"e7a9380346ce52a.jpg"&#125;'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setAttachmentValue</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (data) &#123;</span><br><span class="line">    <span class="keyword">var</span> _dataStr = data</span><br><span class="line">      .substring(<span class="number">0</span>, data.length)</span><br><span class="line">      .replace(<span class="regexp">/&#125;,&#123;/g</span>, <span class="string">'&#125;,,&#123;'</span>)</span><br><span class="line">      .replace(<span class="regexp">/\[/g</span>, <span class="string">''</span>)</span><br><span class="line">      .replace(<span class="regexp">/\]/g</span>, <span class="string">''</span>)</span><br><span class="line">    <span class="keyword">if</span> (_dataStr.indexOf(<span class="string">',,'</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">      data = _dataStr.split(<span class="string">',,'</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> _array = <span class="keyword">new</span> <span class="built_in">Array</span>()</span><br><span class="line">      <span class="keyword">var</span> _objStr = _dataStr.replace(<span class="regexp">/\[/g</span>, <span class="string">''</span>).replace(<span class="regexp">/\]/g</span>, <span class="string">''</span>)</span><br><span class="line">      _array.push(_objStr)</span><br><span class="line">      data = _array</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> u = <span class="number">0</span>; u &lt; data.length; u++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (data[u] &amp;&amp; data[u].length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> attachmentObj = <span class="built_in">JSON</span>.parse(data[u].substring(<span class="number">0</span>, data[u].length))</span><br><span class="line">        data[u] = attachmentObj</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> []</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -465,8 +465,6 @@
     <footer class="post-footer">
       
         <div class="post-tags">
-          
-            <a href="/RoyMueZz.github.io/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
           
             <a href="/RoyMueZz.github.io/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
           
@@ -565,7 +563,7 @@
               
                 <a href="/RoyMueZz.github.io/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -587,7 +585,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/RoyMueZz.github.io/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -700,7 +698,7 @@ show_date_time();
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.9k</span>
+    <span title="Site words total count">4.9k</span>
   
 </div>
 
