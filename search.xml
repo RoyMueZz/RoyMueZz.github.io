@@ -3,9 +3,20 @@
   <entry>
     <title><![CDATA[git]]></title>
     <url>%2FRoyMueZz.github.io%2Fgit.html</url>
-    <content type="text"><![CDATA[分支分支的命令 查看本地分支 1git branch 查看远程分支 1git branch -r 查看远程分支 1git branch -a 创建分支 1git branch (名字) 切换到新创建的分支 1git checkout (名字) 将新分支push到github 1git push origin (名字) 删除本地分支 1git branch -D (名字) 删除远程分支 1git push origin --delete (名字) 分支合并当在某个分支开发完功能之后测试无误之后，想合并到主分支上 本地切换回主分支 1git checkout (主分支的名字) 合并分支 1git merge origin/(其他分支的名字) 推送远程 1git push]]></content>
+    <content type="text"><![CDATA[分支分支的命令 查看本地分支 1git branch 查看远程分支 1git branch -r 查看全部分支(包含本地和远程) 1git branch -a 创建分支 1git branch (名字) 切换到新创建的分支 1git checkout (名字) 将新分支push到github 1git push origin (名字) 删除本地分支 1git branch -D (名字) 删除远程分支 1git push origin --delete (名字) 分支合并当在某个分支开发完功能之后测试无误之后，想合并到主分支上 本地切换回主分支 1git checkout (主分支的名字) 合并分支 1git merge origin/(其他分支的名字) 推送远程 1git push]]></content>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS]]></title>
+    <url>%2FRoyMueZz.github.io%2Fcss.html</url>
+    <content type="text"><![CDATA[padding 占位图片没有加载完成之前的图片的盒子是没有高度的，这样对整体网页会有抖动，影响体验 123&lt;div class="wrapper"&gt; &lt;img src="..." class="wrapper__img" /&gt;&lt;/div&gt; 123456789.wrapper &#123; overflow: hidden; width: 100%; height: 0; padding-bottom: (图片的高度 / 图片的宽度);&#125;.wrapper__img &#123; width: 100%;&#125; min-width:0 文字超出隐藏有时会出现 white-space: nowrap; overflow: hidden; text-overflow: ellipsis; 加了这些样式,可是文字还是没有省略。只要在父级元素上加上 min-width: 0 12345&lt;div class="item-info"&gt; &lt;p class="item-title"&gt;大连圣亚海洋世界&lt;/p&gt; &lt;p class="item-desc"&gt;浪漫大连首站，浪漫的海洋主题乐园&lt;/p&gt; &lt;button class="item-btn"&gt;查看更多&lt;/button&gt;&lt;/div&gt; 12345678910111213.item-info &#123; ... min-width: 0;&#125;.item-title &#123; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;&#125;.item-desc &#123; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;&#125;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
